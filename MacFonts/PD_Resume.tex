@@ -1,0 +1,222 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{enumitem}
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\namesection{}{\custombold{Pan Deng}}{ 
+\href{mailto:pad2016@med.cornell.edu}{pad2016@med.cornell.edu} \\ 347.415.3502
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Cornell University}
+\descript{Ph.D., Cell Biology}
+\location{Expected Dec 2017}
+\sectionsep
+
+\subsection{Tsinghua University}
+\descript{BS, Biological Sciences}
+\location {Grad. June 2012 \\
+Cum. GPA: 89.7 / 100 \\
+Rank: 6 / 68}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/OXPHOS}{\custombold{OXPHOS}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/pandeng16}{\custombold{PanDeng}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Quantitative Genomics and Genetics \\
+Biomedical Machine Learning \\
+\sectionsep
+
+\subsection{Undergraduate}
+Calculus \\
+Linear Algebra and Analytical Geometry \\
+Probability and Statistics \\
+Stochastic Mathematical Methods \\
+C++ Programming \\
+\sectionsep
+
+\subsection{Coursera}
+Algorithms {\footnotesize \textit{\textbf{(Java)}}} \\
+Bioinformatics Algorithms {\footnotesize \textit{\textbf{(Python)}}} \\
+Machine Learning {\footnotesize \textit{\textbf{(Matlab)}}} \\
+Fundamentals of Computing Specialization {\footnotesize \textit{\textbf{(Python)}}} \\
+Cloud Computing Specialization \\
+Data Science at Scale Specialization \\
+System Biology Specialization \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+Python \textbullet{} Matlab \textbullet{} R \\
+C++ \textbullet{} Bash \textbullet{} CMake \\
+Java \textbullet{} SQL \textbullet{} \LaTeX \\
+\sectionsep
+
+
+Spark \textbullet{} Hadoop \textbullet{} Docker\\
+Numpy \textbullet{} Pandas \textbullet{} Tensorflow \\
+Cereal \textbullet{} ViennaCL \textbullet{} Twitter REST 
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+
+\runsubsection{Summer Intern | Open source contributor} \\
+\descript{Shogun Machine Learning Toolbox (C++)}
+\location{May 2016 – Present | Google Summer of Code 2016}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}\item Refactored Shogun’s linear algebra library for CPU and GPU backend operations \item	Refactored Shogun’s serialization framework with Cereal \item Finished cookbook pages: K-means clustering, hierarchical clustering, logistic regression, linear machine, QDA, LDA, Gaussian process, ECOC, shareboost, relaxed tree, chaidtree and cartree.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Open source contributor} \\
+\descript{Pandas Python Data Analysis Toolkit}
+\begin{tightemize}\item Reshaped pivot table and cross-tabulation methods. \item	Improved IO of csv file readers.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{graduate research assistant} \\
+\descript{Memorial Sloan Kettering Cancer Center}
+\location{Sept 2013 - present | Cole Haynes' Lab}
+\begin{tightemize}
+\item Analyzed RNA-sequencing data using Bash, R and Python with STAR, samtools, featureCounts, DESeq2 \item Genome-wide mitochondrial targeting prediction in C. elegans with Python \item Genome-wide transcription factor binding motifs prediction with Python
+\end{tightemize}
+\sectionsep
+
+\runsubsection{graduate research assistant} \\
+\descript{Memorial Sloan Kettering Cancer Center}
+\location{Jan 2013 – March 2013 | Joao Xavier's Lab}
+\begin{tightemize}
+\item 
+Modeled branching pattern of P. aeruginosa population with Matlab \\
+ { \custombold{(Published. 2014 highlights in the New Journal of Physics)}}
+
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HONORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{HONORS} 
+\begin{tabular}{rll}
+2016 &Frank Lappin Horsfall Jr., Student Fellowship 
+&MSKCC	\\
+2012 &Graduate with Honor &Tsinghua University \\
+2012 &Distinguished Dissertation &Tsinghua University \\
+2009-2012 & Comprehensive Scholarship &Tsinghua University \\
+
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Publications} 
+\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
+\item \custombold{Deng, P.}, de Vargas Roditi, L., van Ditmarsch, D., and Xavier, J. B. (2014). The ecological basis of morphogenesis: branching patterns in swarming colonies of bacteria. New journal of physics. \\
+\item  Nargund, A. M., Fiorese, C. J., Pellegrino, M. W., \custombold{Deng, P.}, and Haynes, C. M. (2015). Mitochondrial and Nuclear Accumulation of the Transcription Factor ATFS-1 Promotes OXPHOS Recovery during the UPRmt. Molecular cell. \\
+\item  \custombold{Deng, P.}, and Haynes, C. M. (2016). The mitokine quest (ion). Cell Research. \\
+\item  \custombold{Deng, P.}, and Haynes, C. M. (In press). Mitochondrial dysfunction in cancer: Potential roles of the mitochondrial UPR. Seminars in Cancer Biology.
+\end{enumerate}
+\sectionsep
+
+\end{minipage} 
+\end{document}
