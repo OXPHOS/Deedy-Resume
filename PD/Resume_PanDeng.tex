@@ -44,8 +44,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-\documentclass[]{deedy-resume-openfont}
+\documentclass[]{DS-template-resume}
 \usepackage{enumitem}
 \begin{document}
 
@@ -56,7 +55,7 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\namesection{}{\custombold{Pan Deng}}{ 
+\namesection{}{\textbf{Pan Deng}}{ 
 \href{mailto:pad2016@med.cornell.edu}{pad2016@med.cornell.edu} \\ 347.415.3502
 }
 
@@ -76,15 +75,16 @@
 
 \subsection{Cornell University}
 \descript{Ph.D., Cell Biology}
-\location{Expected Mar 2018}
-\GPA{4.0/4.0}
+\location {Expected Mar 2018 \\
+GPA: 4.0/4.0
+}
 \sectionsep
 
 \subsection{Tsinghua University}
 \descript{BS, Biological Sciences}
 \location {Grad. June 2012 \\
 Cum. GPA: 89.7 / 100 \\
-Rank: 6 / 68}
+Rank: 6 / 68 }
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -92,8 +92,8 @@ Rank: 6 / 68}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Links} 
-Github:// \href{https://github.com/OXPHOS}{\custombold{OXPHOS}} \\
-LinkedIn://  \href{https://www.linkedin.com/in/pandeng16}{\custombold{PanDeng}} \\
+Github:// \href{https://github.com/OXPHOS}{{OXPHOS}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/pandeng16}{{PanDeng}} \\
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,15 +129,19 @@ System Biology Specialization \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Skills}
-\subsection{Programming}
-Python \textbullet{} Matlab \textbullet{} R \\
-C++ \textbullet{} SQL \textbullet{} JAVA \\
+Python \textbullet{} C++ \textbullet{} SQL/NoSQL \\
+Matlab \textbullet{} R \textbullet{} JAVA \textbullet{} \LaTeX \\
 \sectionsep
 
+Bash \textbullet{} CMake \textbullet{} Git \\
+Valgrind  \textbullet{}  Docker \\
+\sectionsep
+Numpy \textbullet{} Pandas \textbullet{} Scikit-learn \\
+\sectionsep
+Apache  MapReduce \textbullet{} HDFS \textbullet{} Hive \\
+Apache Spark \\
+Hortonworks \textbullet{} Cloudera \\
 
-Numpy \textbullet{} Pandas 
-Spark \textbullet{} Hadoop 
-Hortonworks \textbullet{} Cloudera \textbullet{} Docker
 \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,67 +160,80 @@ Hortonworks \textbullet{} Cloudera \textbullet{} Docker
 
 \section{Experience}
 
-\runsubsection{Summer Intern | Open source contributor} \\
+\runsubsection{Core Maintainer  | Google Summer of Code Mentor} \\
 \descript{Shogun Machine Learning Toolbox (C++)}
-\location{May 2016 â€“ Present | Google Summer of Code 2016}
+\location{May 2016 -€“ Present}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}\item Refactored Shogunâ€™s linear algebra library for CPU and GPU backend operations \item	Refactored Shogunâ€™s serialization framework with Cereal \item Finished cookbook pages: K-means clustering, hierarchical clustering, logistic regression, linear machine, QDA, LDA, Gaussian process, ECOC, shareboost, relaxed tree, chaidtree and cartree.
+\begin{tightemize}
+\item Unified the interface to Shogun's data storage and linear algebra operations on CPU and GPU backends
+\item Implemented plug-in based object-oriented linear algebra library supporting algebra operations interfacing from Eigen and ViennaCL
+\item Enabled automatic check, download and installation of Cereal serialization library via CMake
+\item Implemented interface to Cereal serialization library in Shogun 
+\item Documented Shogun's machine learning algorithms, including K-means clustering,hierarchical clustering,logistic regression, linear machine, QDA, LDA, Gaussian process, ECOC, shareboost, relaxed tree, chaidtree and cartree, via Sphinx and meta language generator of Shogun
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Open source contributor} \\
 \descript{Pandas Python Data Analysis Toolkit}
-\begin{tightemize}\item Reshaped pivot table and cross-tabulation methods. \item	Improved IO of csv file readers.
-\end{tightemize}
-\sectionsep
-
-\runsubsection{graduate research assistant} \\
-\descript{Memorial Sloan Kettering Cancer Center}
-\location{Sept 2013 - present | Cole Haynes' Lab}
+\location{May 2016 -€“ Present}
 \begin{tightemize}
-\item Analyzed RNA-sequencing data using Bash, R and Python with STAR, samtools, featureCounts, DESeq2 \item Genome-wide mitochondrial targeting prediction in C. elegans with Python \item Genome-wide transcription factor binding motifs prediction with Python
+\item Fixed key error and value errors bugs in pandas core package
+\item	Unified the default \code{N/A} values in I/O package via decorators
+\end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS} 
+\runsubsection{Steam-based game recommender system} | \location{2017}
+\begin{tightemize}
+\item Implemented html webpage crawler with Python 
+\item Completed data ETL and user-specific game recommendation system with Spark SQL and MLlib (PySpark)
+\\
 \end{tightemize}
 \sectionsep
 
-\runsubsection{graduate research assistant} \\
-\descript{Memorial Sloan Kettering Cancer Center}
-\location{Jan 2013 â€“ March 2013 | Joao Xavier's Lab}
+\runsubsection{Genome-wide gene differential expression analysis of \textit{C. elegans} during mitochondrial stress} \\
+\location{Memorial Sloan Kettering Cancer Center | 2016 }
+\begin{tightemize}
+\item Aligned 8GB+ raw data from C. elegans deep sequencing to reference genome via command line tools STAR, samtools and featureCounts
+\item Normalized and transformed gene expression data with R package DESeq2
+\item Predicted the differential expression of genes and its significance with DESeq2 in R and pandas in Python
+\end{tightemize}
+\sectionsep
+
+
+\runsubsection{Analysis of Casual Polymorphisms Regulating Gene CG9186
+Expression in \textit{D. melanogaster}} \\
+\location{Memorial Sloan Kettering Cancer Center | 2013 }
+\begin{tightemize}
+\item
+Identified genetic variants regulating CG9186 expression with Genome-Wide Association Studies (GWAS) in R
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Microbe population branching pattern modeling}
+\location{Memorial Sloan Kettering Cancer Center | 2013 }
 \begin{tightemize}
 \item 
-Modeled branching pattern of P. aeruginosa population with Matlab \\
- { \custombold{(Published. 2014 highlights in the New Journal of Physics)}}
-
+Simulated the branching behavior of P. aeruginosa population with spatial kernel approach and cellular automaton model in Matlab with data obtained from biological experiments \\
+ { \textbf{(Published. 2014 highlights in the New Journal of Physics)}}
 \end{tightemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS AND CONFERENCES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conferences} 
+\begin{tightemize}
 \sectionsep
+\item  \textbf{CppCon'17 Ligtning Talk presenter}, Seattle, WA, 2017 \\
+\end{tightemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     HONORS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{HONORS} 
-\begin{tabular}{rll}
-2016 &Frank Lappin Horsfall Jr., Student Fellowship 
-&MSKCC	\\
-2012 &Graduate with Honor &Tsinghua University \\
-2012 &Distinguished Dissertation &Tsinghua University \\
-2009-2012 & Comprehensive Scholarship &Tsinghua University \\
 
-\end{tabular}
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     PUBLICATIONS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Publications} 
-\begin{enumerate}[topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]
-\item \custombold{Deng, P.}, de Vargas Roditi, L., van Ditmarsch, D., and Xavier, J. B. (2014). The ecological basis of morphogenesis: branching patterns in swarming colonies of bacteria. New journal of physics. \\
-\item  Nargund, A. M., Fiorese, C. J., Pellegrino, M. W., \custombold{Deng, P.}, and Haynes, C. M. (2015). Mitochondrial and Nuclear Accumulation of the Transcription Factor ATFS-1 Promotes OXPHOS Recovery during the UPRmt. Molecular cell. \\
-\item  \custombold{Deng, P.}, and Haynes, C. M. (2016). The mitokine quest (ion). Cell Research. \\
-\item  \custombold{Deng, P.}, and Haynes, C. M. (In press). Mitochondrial dysfunction in cancer: Potential roles of the mitochondrial UPR. Seminars in Cancer Biology.
-\end{enumerate}
-\sectionsep
 
 \end{minipage} 
 \end{document}
